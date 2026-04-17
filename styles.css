@@ -124,5 +124,484 @@ color: #ff5722;
 font-weight: bold;
 
 }
-  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+}
+
+ 
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #00bfff;
+}
+
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+
+/* ============================
+   Body Styling
+============================ */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+ 
+
+/* ============================
+   Header
+============================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+}
+
+ 
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #00bfff;
+}
+
+
+/* ============================
+   Navigation
+============================ */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+ 
+
+nav a {
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+ 
+
+nav a:hover {
+    color: #ffffff;
+}
+
+ 
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00bfff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+ 
+
+nav a:hover::after {
+    width: 100%;
+}
+
+ 
+
+/* ============================
+   Main Section
+============================ */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: rgba(0,0,50,0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    text-align: left;
+}
+
+ 
+
+/* Headings */
+h2, h3 {
+    color: #00bfff;
+    margin-bottom: 15px;
+}
+
+ 
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ 
+
+/* Paragraphs */
+main p {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+ 
+
+/* ============================
+   History Cards
+============================ */
+.history-card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ 
+
+.history-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+}
+
+ 
+
+.history-card img {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+}
+
+ 
+
+/* =======================
+model cards
+==========================*/
+.model-card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ 
+
+.model-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+}
+
+ 
+
+.model-card img {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+}
+
+ 
+
+.model-card h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+ 
+
+.model-card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ 
+
+ 
+
+/* ============================
+   Footer
+============================ */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 14px;
+}
+
+ 
+
+/* ============================
+   Links
+============================ */
+a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ 
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+ 
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 800px) {
+    header { flex-direction: column; gap: 15px; }
+    nav { flex-direction: column; gap: 10px; }
+    main { padding: 30px 15px; }
+    .history-card img { width: 100%; }
+}
+
+ 
+
+ 
+
+/* Next & Previous Buttons */
+
+ 
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+}
+
+ 
+
+.prev {
+    left: 10px;
+}
+
+ 
+
+.next {
+    right: 10px;
+}
+
+ 
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+ 
+
+/* Dots */
+
+ 
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+ 
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+ 
+
+.active {
+    background-color: #00bfff;
+}
+/* ============================
+   Hero Section
+============================ */
+
+ 
+
+.hero-section {
+    height: 80vh;
+    background-image: url("BMW M4.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+ 
+
+ 
+
+   
+/* ============================
+   HERO VIDEO SECTION
+============================ */
+
+ 
+
+.hero-video {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+ 
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ 
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+ 
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ 
+
+.hero-title {
+    font-size: 70px;
+    letter-spacing: 4px;
+    animation: fadeDown 2s ease;
+}
+
+ 
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeUp 2s ease;
+}
+
+ 
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ 
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ============================
+   LOADER
+============================ */
+
+ 
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+ 
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #333;
+    border-top: 6px solid #00bfff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+ 
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+.carousel img{
+height:500px;
+object-fit:cover;
+border-radius:15px;
+}
+
+ 
+
+.carousel-caption{
+background:rgba(0,0,0,0.5);
+border-radius:10px;
+padding:10px;
+}
   
